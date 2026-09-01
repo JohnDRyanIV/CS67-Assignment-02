@@ -6,7 +6,11 @@
 
 
 import java.util.Scanner;
-
+/**
+ * This class represents an animal. There is a species, name, gender, and age
+ * associated with the animal. There is a toString method that returns a
+ * human-legible message regarding the animal.
+ */
 public class Animal {
 
     private String species;
@@ -14,6 +18,12 @@ public class Animal {
     private String name;
     private int age;
 
+    /**
+     * @param s = species of the animal
+     * @param g = gender of animal
+     * @param n = name of animal
+     * @param a = age of animal
+     */
     public Animal(String s, String g, String n, int a)
     {
         setSpecies(s);
