@@ -18,25 +18,37 @@ public class Animal {
     private String name;
     private int age;
 
+    private String exhibit;
+
     /**
      * @param s = species of the animal
      * @param g = gender of animal
      * @param n = name of animal
      * @param a = age of animal
+     * @param e = Exhibit animal is in
      */
-    public Animal(String s, String g, String n, int a)
+    
+    public Animal(String s, String n, int a, String e)
     {
         setSpecies(s);
-        setGender(g);
         setName(n);
         setAge(a);
+        setExhibit(e);
+    }
+
+    public Animal(String s, String n, int a)
+    {
+        setSpecies(s);
+        setName(n);
+        setAge(a);
+        setExhibit("none");
     }
 
     /* To String */
 
     public String toString() {
         String message = "";
-        message += getName() + " is a " + Integer.toString(getAge()) + " year old " + getGender() + " " + getSpecies() + "!";
+        message += getName() + " is a " + Integer.toString(getAge()) + " year old " + getSpecies() + " in exhibit " + getExhibit() + "!";
         return message;
     }
 
@@ -50,12 +62,12 @@ public class Animal {
         return this.species;
     }
 
-    public String getGender() {
-        return this.gender;
-    }
-
     public int getAge() { 
         return this.age;
+    }
+
+    public String getExhibit() {
+        return this.exhibit;
     }
 
     public void setName(String n) {
@@ -66,12 +78,12 @@ public class Animal {
         this.species = s;
     }
 
-    public void setGender(String g) {
-        this.gender = g;
-    }
-
     public void setAge(int a) {
         this.age = a;
+    }
+
+    public void setExhibit(String e) {
+        this.exhibit = e;
     }
 
     
